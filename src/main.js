@@ -3,10 +3,18 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Antd from 'ant-design-vue'
+import 'ant-design-vue/dist/antd.css'
+
+import { dialog } from "./components/common/dialogUtil";
 
 Vue.config.productionTip = false
 
+Vue.use(Antd)
+Vue.prototype.$dialog = dialog
+
 /* eslint-disable no-new */
+
 new Vue({
   el: '#app',
   router,
